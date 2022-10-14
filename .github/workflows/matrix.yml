@@ -17,13 +17,13 @@ jobs:
           - os: macos-latest
             node-version: 8
     env:
-      IS_UBUNTU_8: $ {{ matrix.is_ubuntu_8 }}
+      IS_UBUNTU_8: ${{ matrix.is_ubuntu_8 }}
     runs-on: ${{ matrix.os }}
     steps:
       - name: Log node node-version
         run: |
           node -v
-          echo ${IS_UBUNTU_8}
+          echo $IS_UBUNTU_8
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}

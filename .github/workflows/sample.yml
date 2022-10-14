@@ -1,14 +1,20 @@
 name: shell_commands
 
 on:
-  repository_dispatch:
-    types: [build]
+  push:
+    branches:
+      - master
+      - '!develop'
+    tags:
+      - v1
+  # repository_dispatch:
+  #   types: [build]
   # push:
   # schedule:
   #   - cron: '0/5 * * * *'
   #   - cron: '0/6 * * * *'
-  pull_request:
-    types: [closed, assigned, reopened, closed]
+  # pull_request:
+  #   types: [closed, assigned, reopened, closed]
 
 jobs:
   run-shell-command:

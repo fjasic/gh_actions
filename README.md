@@ -1,1 +1,3 @@
-"# gh_actions" 
+# GitHub Actions repo
+
+## Playground for GitHub Actions

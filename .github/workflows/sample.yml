@@ -36,9 +36,11 @@ jobs:
   run-windows-command:
     runs-on: windows-latest
     needs: ["run-shell-command"]
+    timeout-minutes: 3
     steps:
       - name: on powershell
         run: Get-Location
+        timeout-minutes: 1
       - name: on cmd
         run: pwd
         shell: bash
